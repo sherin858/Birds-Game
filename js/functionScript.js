@@ -5,10 +5,14 @@ const createBird = () => {
     "./assets/bird-2.gif",
     "./assets/bird-3.gif",
   ];
-  bird.src = birdSrc[Math.floor(Math.random() * 3)];
+  bird.src = birdSrc[Math.floor(Math.random() * birdSrc.length)];
   bird.classList.add("bird");
-  randomBird(bird);
-  moveRight(bird);
+  document.body.appendChild(bird);
+  bird.onload = function () {
+    let topVal = Math.random() * (innerHeight - this.height);
+    this.style.top = topVal + "px";
+    moveRight(this);
+  };
 };
 
 const moveRight = (bird) => {
@@ -22,16 +26,6 @@ const moveRight = (bird) => {
       clearInterval(id);
     }
   }, 30);
-};
-const randomBird = (bird) => {
-  let topVal = Math.random() * window.innerHeight;
-  if (topVal < bird.height && topVal > 0) {
-    console.log(topVal);
-    bird.style.top = topVal + "px";
-    document.body.appendChild(bird);
-  } else {
-    topVal = randomBird(bird);
-  }
 };
 const createBomb = () => {
   let bomb = document.createElement("img");
@@ -61,6 +55,8 @@ const moveDown = (bomb) => {
     }
   }, 60);
   bomb.addEventListener("click", function (e) {
+    let bombRange = document.createElement("div");
+    bombRange.classList.add("bomb-range");
     let scoreChange = document.createElement("p");
     scoreChange.classList.add("score-change");
     scoreChange.textContent = "0";
@@ -68,6 +64,13 @@ const moveDown = (bomb) => {
     scoreChange.style.color = `#${color}`;
     scoreChange.style.left = e.clientX + "px";
     scoreChange.style.top = e.clientY + "px";
+    bombRange.style.left = e.clientX - 150 + "px";
+    bombRange.style.top = e.clientY - 150 + "px";
+    document.body.appendChild(bombRange);
+    let bombRangeId = setTimeout(() => {
+      bombRange.remove();
+      clearTimeout(bombRangeId);
+    }, 40);
     document.querySelectorAll(".bird").forEach(function (bird) {
       let distance = getDistanceBetweenElements(bird, bomb);
       if (distance <= 300) {
