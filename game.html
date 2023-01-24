@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/all.min.css" />
+    <link rel="stylesheet" href="./styles/game.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Game</title>
+  </head>
+  <body>
+    <div class="game">
+      <div class="message">
+        <div>
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <h2></h2>
+        <p>We hope you enjoy our game</p>
+        <p>
+          To win , you should kill 25(black and white) birds in specified time
+        </p>
+        <button type="button" class="btn-play">Start Game</button>
+      </div>
+      <div class="game-info">
+        <div>Welcome : <span class="welcome"></span></div>
+        <div>Score : <span class="score">0</span></div>
+        <div>Time Limit : <span class="time-left">60</span></div>
+        <div>Birds Killed : <span class="birds-killed">0</span></div>
+      </div>
+      <div class="message hide">
+        <h2>YOU WIN</h2>
+        <div>
+          <img src="./assets/bird-1.gif" alt="bird-1" class="bird-msg" />
+        </div>
+        <button type="button" class="btn-play">Play Again</button>
+      </div>
+    </div>
+    <script src="./js/functionScript.js"></script>
+    <script src="./js/game.js"></script>
+  </body>
+</html>

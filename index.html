@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="home">
+      <div class="info-container">
+        <div>
+          <form action="./game.html" method="get" class="info">
+            <div>
+              <label for="game-level">Select Game Level</label>
+              <select name="game-level">
+                <option value="1" selected>level 1</option>
+              </select>
+            </div>
+            <div>
+              <label for="username">Enter Your Name</label>
+              <input type="text" name="username" />
+            </div>
+            <button>Go</button>
+          </form>
+        </div>
+        <div>
+          <p>Game Bird Shooting Points</p>
+          <div class="info-birds">
+            <img src="./assets/bird-1.gif" alt="bird-1" />
+            <span>+5 Points</span>
+          </div>
+          <div class="info-birds">
+            <img src="./assets/bird-2.gif" alt="bird-2" />
+            <span>+5 Points</span>
+          </div>
+          <div class="info-birds">
+            <img src="./assets/bird-3.gif" alt="bird-3" />
+            <span>-10 Points</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

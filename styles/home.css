@@ -1,0 +1,85 @@
+:root {
+  --info-bg: #0000002d;
+}
+* {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+}
+.home {
+  background-image: url(../assets/1.jpg);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: grid;
+  place-items: center;
+}
+.info-container {
+  width: 600px;
+  max-width: 100%;
+}
+.info-container > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.25rem;
+  background-color: var(--info-bg);
+}
+.info {
+  width: 100%;
+}
+.info label {
+  display: block;
+  font-size: 1.1rem;
+}
+.info input,
+.info select,
+.info button {
+  width: 40%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+.info button {
+  width: 25%;
+  cursor: pointer;
+}
+.info-birds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.info-birds:first-of-type {
+  color: blue;
+}
+.info-birds:nth-of-type(2) {
+  color: orange;
+}
+.info-birds:nth-of-type(3) {
+  color: red;
+}
+.info-birds img {
+  width: 50px;
+  margin-right: 0.5rem;
+}

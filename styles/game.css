@@ -1,0 +1,88 @@
+:root {
+  --transition: all linear 0.3s;
+  --info-bg: #0000002d;
+}
+* {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+}
+.game {
+  background-image: url(../assets/Background_2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.message {
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+/* .message:last-of-type {
+  display: none;
+  z-index: 3;
+} */
+.message i {
+  color: #00ddff94;
+  font-size: 2rem;
+}
+.hide {
+  display: none;
+}
+.game-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+.game-info div {
+  background-color: var(--info-bg);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.bird {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.bomb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  z-index: 2;
+}
+.btn-play {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: greenyellow;
+  border-color: transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.bird-msg {
+  width: 100px;
+}
+.score-change {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
