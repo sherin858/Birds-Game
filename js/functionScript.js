@@ -1,17 +1,15 @@
 //creating a random type bird
 const createBird = () => {
   let bird = document.createElement("img");
-  let birdsSrc = [
-    "./assets/bird-1.gif",
-    "./assets/bird-2.gif",
-    "./assets/bird-3.gif",
-  ];
   let birdsScores = {
     "./assets/bird-1.gif": "+10",
     "./assets/bird-2.gif": "+5",
     "./assets/bird-3.gif": "-10",
   };
-  let birdSrc = birdsSrc[Math.floor(Math.random() * birdsSrc.length)];
+  let birdSrc =
+    Object.keys(birdsScores)[
+      Math.floor(Math.random() * Object.keys(birdsScores).length)
+    ];
   bird.src = birdSrc;
 
   //attribute holding the score
