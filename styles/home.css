@@ -79,7 +79,12 @@ body {
 .info-birds:nth-of-type(3) {
   color: red;
 }
+.info-birds div {
+  width: 100px;
+}
 .info-birds img {
-  width: 50px;
-  margin-right: 0.5rem;
+  width: 100px;
+}
+.info-birds:nth-of-type(2) img {
+  width: 40px;
 }
