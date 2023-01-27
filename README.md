@@ -1,5 +1,5 @@
 # Birds Shooting Game :innocent:
-###### This is my simple birds shooting game using vanilla JavaScript and CSS only
+###### This is my simple birds shooting game using vanilla JavaScript , CSS and HTML only
 
 ###### Description:
 1. Home page
