@@ -1,4 +1,4 @@
-# Birds Shooting Game :innocent:
+# Birds Shooting Game :duck:
 ###### This is my simple birds shooting game using vanilla JavaScript , CSS and HTML only
 
 ###### Description:
