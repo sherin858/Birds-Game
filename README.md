@@ -3,7 +3,7 @@
 
 ###### Description:
 1. Home page
-![Alt text](assets/home.PNG)
+![Alt text](assets/home1.PNG)
 2. Start game
 
 ![Alt text](assets/game1.PNG)
